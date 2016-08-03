@@ -1,21 +1,25 @@
 import React from "react";
 import classNames from "classnames";
 import style from "./Profile.css";
-import profileImage from "./images/profile.jpg"
 
+
+var clientHeight = {height:0};
 
 export default class HomePage extends React.Component {
   render() {
-    var mainClass = classNames("row", style.profile);
+    let mainClass = classNames("row", style.profile),
+        colClass = classNames(["col-sm-12", "col-md-6", style.profile_col ]),
+        profileHeight = window.innerHeight - 54;
+
     return (
-      <div className={mainClass}>
-      <div className="col-sm-12 col-md-6">
-        <h1 className={style.profile_text}>Hi! I'm a Javascript Enginner & Front-End developer from Poland living in Cracow.</h1>
+      <div className={mainClass} ref="profileContainer"style={{height :profileHeight}}>
+      <div className={colClass}>
+      <div className={style.profile_text}> 
+        <h1 >Hi! I'm a Javascript Enginner & Front-End developer from Poland living in Cracow.</h1>
+        </div>  
       </div>
-      <div className="col-sm-12 col-md-6">
-        <div className={style.profile_container}>
-          <img className={style.profile_img} src={profileImage}></img>
-        </div>
+      <div className={colClass}>
+          <div className={style.profile_img} ></div>
       </div>
       </div>
     );
