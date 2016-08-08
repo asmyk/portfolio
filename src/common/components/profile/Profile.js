@@ -5,7 +5,7 @@ import style from "./Profile.css";
 
 var clientHeight = {height:0};
 
-export default class HomePage extends React.Component {
+export default class Profile extends React.Component {
   render() {
     let mainClass = classNames("row", style.profile),
         colClass = classNames(["col-sm-12", "col-md-6", style.profile_col ]),
