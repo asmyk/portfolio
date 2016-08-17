@@ -2,14 +2,32 @@
 @import 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css';
 
 @font-face {
-  font-family: 'Fabrica';
-  src: url('../assets/fonts/fabrica.eot');
-  src: url('../assets/fonts/fabrica.eot?#iefix') format('embedded-opentype'),
-       url('../assets/fonts/fabrica.woff') format('woff'),
-       url('../assets/fonts/fabrica.ttf') format('truetype'),
-       url('../assets/fonts/fabrica.svg#Fabrica') format('svg');
+  font-family: 'Raleway-ExtraLight';
+  src: url('../assets/fonts/Raleway-ExtraLight.eot');
+  src: url('../assets/fonts/Raleway-ExtraLight.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Raleway-ExtraLight.woff') format('woff'),
+       url('../assets/fonts/Raleway-ExtraLight.ttf') format('truetype'),
+       url('../assets/fonts/Raleway-ExtraLight.svg#Fabrica') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway-Medium';
+  src: url('../assets/fonts/Raleway-Medium.eot');
+  src: url('../assets/fonts/Raleway-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Raleway-Medium.woff') format('woff'),
+       url('../assets/fonts/Raleway-Medium.ttf') format('truetype'),
+       url('../assets/fonts/Raleway-Medium.svg#Fabrica') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+::selection {
+  background: #ffb7b7; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ffb7b7; /* Gecko Browsers */
 }
 
 * {
@@ -18,9 +36,9 @@
 
 body {
   margin: 0;
-  font-family: "Fabrica";
+  font-family: "Raleway-ExtraLight";
   font-weight: 300;
-  background-color: #fff;
+  background-color: #f6f6f6;
 }
 
 h1 {
@@ -28,11 +46,24 @@ h1 {
   color: #2f3131;
 }
 
+h2{
+  font-weight: bold;}
+  h3{
+    line-height: 1.2;
+  }
+
+  h1,h2,h3{
+    letter-spacing: 1px;
+  }
+
+.navbar{
+  width:100%;
+}
+
 .navbar_toggler{
   color:#cfcfca;
   padding-left:0;
 }
-
-.text-center{
-  text-align: center;
+.navbar_toggler:focus{
+  outline: none;
 }

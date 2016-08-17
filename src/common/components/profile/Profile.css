@@ -1,15 +1,14 @@
 .profile{
     padding-top:2rem;
-}
+    height:100vh;
+    min-height: 800px;
+    overflow:hidden;
+    }
 
-.profile_col{
-    height: 100%;
-}
 .profile_col+.profile_col{
     border-left:5px solid #fcfcfa;
+    height: 100%;
 }
-
-
 
 
 .profile_img{
@@ -20,7 +19,16 @@
     height:100%;
 }
 
+@media (max-width: 767px){
+    .profile_col+.profile_col{
+            margin:50px 0px;
+    }
+}
+
 @media (min-width: 768px){
+    .profile_col{
+        height: 100%;
+    }
     .profile_text{
     position: absolute;
     top: 50%;
